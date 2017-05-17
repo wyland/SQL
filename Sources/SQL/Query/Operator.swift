@@ -10,6 +10,7 @@ public enum Operator {
     case containedIn
     
     case like
+    case ilike
 }
 
 extension Operator: StatementStringRepresentable {
@@ -31,6 +32,8 @@ extension Operator: StatementStringRepresentable {
             return "IN"
         case .like:
             return "LIKE"
+        case .ilike:
+            return "ILIKE"
         }
     }
 }
