@@ -8,6 +8,9 @@ public enum Operator {
     case lessThanOrEqual
     case contains
     case containedIn
+    
+    case like
+    case ilike
 }
 
 extension Operator: StatementStringRepresentable {
@@ -27,6 +30,10 @@ extension Operator: StatementStringRepresentable {
             return "CONTAINS"
         case .containedIn:
             return "IN"
+        case .like:
+            return "LIKE"
+        case .ilike:
+            return "ILIKE"
         }
     }
 }
